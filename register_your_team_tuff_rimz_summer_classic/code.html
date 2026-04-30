@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Be+Vietnam+Pro:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "outline": "#7f7662",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f4f0e7",
+                    "primary": "#755b00",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#241a00",
+                    "on-primary-container": "#6c5400",
+                    "background": "#fdf9f0",
+                    "surface-container-low": "#f7f3ea",
+                    "primary-fixed-dim": "#eec13c",
+                    "on-surface-variant": "#4e4634",
+                    "surface-container-high": "#ece8df",
+                    "on-tertiary-fixed": "#001f27",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-dim": "#dddad1",
+                    "tertiary": "#00687b",
+                    "inverse-surface": "#31312b",
+                    "inverse-primary": "#eec13c",
+                    "secondary": "#a83900",
+                    "tertiary-fixed": "#afecff",
+                    "surface-tint": "#755b00",
+                    "primary-fixed": "#ffe08f",
+                    "secondary-container": "#fc7138",
+                    "outline-variant": "#d1c5ae",
+                    "surface": "#fdf9f0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fdf9f0",
+                    "secondary-fixed": "#ffdbcf",
+                    "tertiary-container": "#74dbf8",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#6dd4f1",
+                    "on-surface": "#1c1c17",
+                    "on-background": "#1c1c17",
+                    "surface-variant": "#e6e2d9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#005f72",
+                    "primary-container": "#f5c842",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-primary-fixed-variant": "#584400",
+                    "on-tertiary-fixed-variant": "#004e5d",
+                    "surface-container": "#f1eee5",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "on-secondary-fixed-variant": "#812900",
+                    "on-secondary-container": "#5f1c00",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "gutter": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px",
+                    "container-padding": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Be Vietnam Pro"],
+                    "display": ["Lexend"],
+                    "h2": ["Lexend"],
+                    "h1": ["Lexend"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-bold": ["Lexend"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hard-shadow-hover:hover {
+            box-shadow: 4px 4px 0px 0px #a83900;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #74dbf8 !important;
+            border-width: 2px !important;
+        }
+    </style>
+</head>
+<body class="bg-[#FDF3C0] font-body-md text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<nav class="bg-slate-900 dark:bg-black border-b border-white/10 flex justify-between items-center px-6 h-16 w-full fixed top-0 z-50">
+<a class="flex items-center gap-4" href="index.html">
+<div class="bg-amber-400 p-1 rounded-sm">
+<span class="text-xl font-black italic text-slate-900 font-display">TR</span>
+</div>
+<span class="text-xl font-black italic text-white font-display hidden sm:block">Tuff Rimz</span>
+</a>
+<div class="flex items-center gap-4">
+<a class="hidden md:block px-4 py-2 rounded-full bg-white/10 text-white font-label-bold hover:bg-white/20 transition-colors duration-200" href="register.html">Register a Team</a>
+<div class="relative group">
+<button class="text-white hover:bg-white/5 transition-colors duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="absolute right-0 top-full mt-2 w-48 bg-slate-800 rounded-lg shadow-xl py-2 hidden group-hover:block"><a class="block px-4 py-2 text-white hover:bg-white/10" href="index.html">Home</a>
+<a class="block px-4 py-2 text-white hover:bg-white/10" href="schedule.html">Schedule</a>
+<a class="block px-4 py-2 text-white hover:bg-white/10" href="standings.html">Standings</a>
+<a class="block px-4 py-2 text-white hover:bg-white/10" href="rules.html">Rules</a>
+<a class="block px-4 py-2 text-white hover:bg-white/10" href="about.html">About</a></div>
+</div>
+<span class="material-symbols-outlined text-amber-400">account_circle</span>
+</div>
+</nav>
+<!-- Hero Header Section -->
+<header class="relative bg-slate-900 pt-32 pb-16 px-6 text-center overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="An action-packed wide shot of an outdoor urban basketball court during a vibrant summer sunset. The sky is filled with warm oranges and deep purples, casting long shadows across the asphalt. A vintage film grain effect is applied to create a nostalgic, high-energy community tournament atmosphere. The scene is dynamic, capturing the essence of a legendary 70s-style streetball game." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkACt9P3ARIyad1z1l42_iH0L9fWW5T7HJWqw_lCac47WmHlrZfCiD4AXDSaxQzOh0KjHKLVWt705yA_TXOa5zi2Kv7OxmW-mlgCPMDe2h0_HMDRup5Y90OUFd_RzwxfJTgTO_opv3xLmelqcUOYWFcsHVeZeiVp0cdagxF7wiayg6J12r6_bEUbkDj7p5tVIPqBDICGw9Yp_VNcJl-RaPHku8a2h6sGZHt6zfL_VDEj421E8iTC_vwa4sDsyRnjncyqjZKbHKdOWM"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h1 class="font-display text-display text-white mb-4">Register Your Team</h1>
+<p class="font-body-lg text-white/90 max-w-2xl mx-auto">Secure your spot in the Tuff Rimz Summer Classic. $250 entry fee due by June 1st.</p>
+</div>
+</header>
+<!-- Registration Form Section -->
+<main class="flex-grow py-12 px-6">
+<div class="max-w-[640px] mx-auto bg-surface border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<form class="p-8 space-y-10">
+<!-- Section 1: Team Info -->
+<section class="space-y-6">
+<h2 class="font-display text-label-bold text-secondary tracking-widest border-b border-outline-variant pb-2">TEAM INFO</h2>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-on-surface-variant">Team Name</label>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="Enter team name" type="text"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Captain Info -->
+<section class="space-y-6">
+<h2 class="font-display text-label-bold text-secondary tracking-widest border-b border-outline-variant pb-2">CAPTAIN INFO</h2>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-on-surface-variant">Captain Full Name</label>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="First and last name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-on-surface-variant">Phone Number</label>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-on-surface-variant">Email Address</label>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="captain@email.com" type="email"/>
+</div>
+</div>
+</section><section class="space-y-6"><h2 class="font-display text-label-bold text-secondary tracking-widest border-b border-outline-variant pb-2">PLAYER ROSTER</h2><div class="flex flex-col gap-2"><label class="font-label-bold text-on-surface-variant">Number of Players</label><input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="e.g. 8" type="text"/></div></section>
+<!-- Section 3: Player Roster -->
+<!-- Section 4: Acknowledgments -->
+<section class="space-y-4 pt-4">
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded text-secondary focus:ring-secondary" id="check1" type="checkbox"/>
+<label class="text-sm text-on-surface-variant leading-tight" for="check1">I understand the $250 entry fee must be paid in full via Venmo, CashApp, or Cash before June 1st</label>
+</div>
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded text-secondary focus:ring-secondary" id="check2" type="checkbox"/>
+<label class="text-sm text-on-surface-variant leading-tight" for="check2">I have read and agree to the official Tuff Rimz rules</label>
+</div>
+</section>
+<!-- Section 5: Submit -->
+<section class="space-y-4 pt-6 text-center">
+<button class="w-full bg-[#F5C842] text-black font-display font-black text-lg py-4 rounded-full hard-shadow-hover transition-all active:scale-95" type="submit">
+                        Lock Us In
+                    </button>
+<p class="text-xs text-on-surface-variant italic">After submitting, you will be contacted with payment instructions. Fees ($250) must be paid via Venmo, CashApp, or Cash before June 1st.</p>
+</section>
+</form><div class="hidden p-12 text-center space-y-6" id="success-message">
+<div class="w-20 h-20 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<h2 class="font-display text-h1 text-on-surface">You're in!</h2>
+<p class="font-body-lg text-on-surface-variant max-w-sm mx-auto">
+    We'll be in touch within 48 hours with payment info. See you on the court. 🏀
+  </p>
+<button class="mt-8 px-8 py-3 bg-slate-900 text-white rounded-full font-label-bold hover:bg-slate-800 transition-colors" onclick="window.location.href='index.html'">
+    Back to Home
+  </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-black w-full py-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center px-8 gap-6 mt-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-lg font-black text-white font-display">Tuff Rimz Summer Classic</span>
+<p class="font-['Lexend'] text-sm text-white/60">© 2024 Tuff Rimz Summer Classic. All Rights Reserved.</p>
+</div>
+<nav class="flex gap-8"><a class="font-['Lexend'] text-sm text-white/60 hover:text-white transition-colors" href="rules.html">Rules</a>
+<a class="font-['Lexend'] text-sm text-white/60 hover:text-white transition-colors" href="schedule.html">Schedule</a>
+<a class="font-['Lexend'] text-sm text-white/60 hover:text-white transition-colors" href="#">Contact</a>
+<a class="font-['Lexend'] text-sm text-white/60 hover:text-white transition-colors" href="#">Privacy</a></nav>
+</footer>
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.classList.add('hidden');
+    document.getElementById('success-message').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script></body></html>
