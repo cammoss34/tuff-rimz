@@ -147,13 +147,13 @@
 <main class="flex-grow py-12 px-6">
 <div class="max-w-[640px] mx-auto bg-surface border border-outline-variant rounded-xl overflow-hidden shadow-sm">
 <form class="space-y-6" id="registration-form" action="https://formspree.io/f/xykoykep" method="POST">
-      <!-- Section 1: Team Info -->
+<!-- Section 1: Team Info -->
 <section class="space-y-6">
 <h2 class="font-display text-label-bold text-secondary tracking-widest border-b border-outline-variant pb-2">TEAM INFO</h2>
 <div class="grid grid-cols-1 gap-6">
 <div class="flex flex-col gap-2">
 <label class="font-label-bold text-on-surface-variant">Team Name</label>
-<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="Enter team name" type="text"/>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="Enter team name" type="text" name="team_name" required/>
 </div>
 </div>
 </section>
@@ -163,48 +163,55 @@
 <div class="grid grid-cols-1 gap-6">
 <div class="flex flex-col gap-2">
 <label class="font-label-bold text-on-surface-variant">Captain Full Name</label>
-<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="First and last name" type="text"/>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="First and last name" type="text" name="captain_name" required/>
 </div>
 <div class="flex flex-col gap-2">
 <label class="font-label-bold text-on-surface-variant">Phone Number</label>
-<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="(555) 000-0000" type="tel"/>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="(555) 000-0000" type="tel" name="phone" required/>
 </div>
 <div class="flex flex-col gap-2">
 <label class="font-label-bold text-on-surface-variant">Email Address</label>
-<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="captain@email.com" type="email"/>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="captain@email.com" type="email" name="email" required/>
 </div>
 </div>
-</section><section class="space-y-6"><h2 class="font-display text-label-bold text-secondary tracking-widest border-b border-outline-variant pb-2">PLAYER ROSTER</h2><div class="flex flex-col gap-2"><label class="font-label-bold text-on-surface-variant">Number of Players</label><input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="e.g. 8" type="text"/></div></section>
-<!-- Section 3: Player Roster -->
+</section>
+<section class="space-y-6">
+<h2 class="font-display text-label-bold text-secondary tracking-widest border-b border-outline-variant pb-2">PLAYER ROSTER</h2>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-on-surface-variant">Number of Players</label>
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md" placeholder="e.g. 8" type="text" name="num_players"/>
+</div>
+</section>
 <!-- Section 4: Acknowledgments -->
 <section class="space-y-4 pt-4">
 <div class="flex items-start gap-3">
-<input class="mt-1 rounded text-secondary focus:ring-secondary" id="check1" type="checkbox"/>
+<input class="mt-1 rounded text-secondary focus:ring-secondary" id="check1" type="checkbox" name="fee_acknowledged" required/>
 <label class="text-sm text-on-surface-variant leading-tight" for="check1">I understand the $250 entry fee must be paid in full via Venmo, CashApp, or Cash before June 1st</label>
 </div>
 <div class="flex items-start gap-3">
-<input class="mt-1 rounded text-secondary focus:ring-secondary" id="check2" type="checkbox"/>
+<input class="mt-1 rounded text-secondary focus:ring-secondary" id="check2" type="checkbox" name="rules_acknowledged" required/>
 <label class="text-sm text-on-surface-variant leading-tight" for="check2">I have read and agree to the official Tuff Rimz rules</label>
 </div>
 </section>
 <!-- Section 5: Submit -->
 <section class="space-y-4 pt-6 text-center">
 <button class="w-full bg-[#F5C842] text-black font-display font-black text-lg py-4 rounded-full hard-shadow-hover transition-all active:scale-95" type="submit">
-                        Lock Us In
-                    </button>
+  Lock Us In
+</button>
 <p class="text-xs text-on-surface-variant italic">After submitting, you will be contacted with payment instructions. Fees ($250) must be paid via Venmo, CashApp, or Cash before June 1st.</p>
 </section>
-</form><div class="hidden p-12 text-center space-y-6" id="success-message">
+</form>
+<div class="hidden p-12 text-center space-y-6" id="success-message">
 <div class="w-20 h-20 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-6">
 <span class="material-symbols-outlined text-4xl">check_circle</span>
 </div>
 <h2 class="font-display text-h1 text-on-surface">You're in!</h2>
 <p class="font-body-lg text-on-surface-variant max-w-sm mx-auto">
-    We'll be in touch within 48 hours with payment info. See you on the court. 🏀
-  </p>
+  We'll be in touch within 48 hours with payment info. See you on the court. 🏀
+</p>
 <button class="mt-8 px-8 py-3 bg-slate-900 text-white rounded-full font-label-bold hover:bg-slate-800 transition-colors" onclick="window.location.href='index.html'">
-    Back to Home
-  </button>
+  Back to Home
+</button>
 </div>
 </div>
 </main>
