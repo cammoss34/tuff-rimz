@@ -146,8 +146,8 @@
 <!-- Registration Form Section -->
 <main class="flex-grow py-12 px-6">
 <div class="max-w-[640px] mx-auto bg-surface border border-outline-variant rounded-xl overflow-hidden shadow-sm">
-<form class="p-8 space-y-10">
-<!-- Section 1: Team Info -->
+<form class="space-y-6" id="registration-form" action="https://formspree.io/f/xykoykep" method="POST">
+      <!-- Section 1: Team Info -->
 <section class="space-y-6">
 <h2 class="font-display text-label-bold text-secondary tracking-widest border-b border-outline-variant pb-2">TEAM INFO</h2>
 <div class="grid grid-cols-1 gap-6">
@@ -219,11 +219,4 @@
 <a class="font-['Lexend'] text-sm text-white/60 hover:text-white transition-colors" href="#">Contact</a>
 <a class="font-['Lexend'] text-sm text-white/60 hover:text-white transition-colors" href="#">Privacy</a></nav>
 </footer>
-<script>
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    this.classList.add('hidden');
-    document.getElementById('success-message').classList.remove('hidden');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script></body></html>
+</body></html>
